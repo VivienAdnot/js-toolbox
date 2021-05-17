@@ -1,0 +1,1 @@
+- nodash: accepte une string qui peut contenir lettres/chiffres/underscore mais pas de tiret (Exemple: Bloom1_4 ok, foo-1 no ok)

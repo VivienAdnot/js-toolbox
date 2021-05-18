@@ -67,3 +67,24 @@ describe("async for loop", () => {
     expect(result).toEqual("AB");
   });
 });
+
+// not working
+// it('async foreach', () => {
+//   const getAdvertiserTags2 = (x) => Promise.resolve(x * 10);
+//   const array = [1,2,3,4,5];
+//   const arrayResult = []
+
+//   array.forEach(index => {
+//     console.log("new iteration", index);
+    
+//     getAdvertiserTags2(index).then(result => {
+//       arrayResult.push(result);
+//       console.log(index, result);
+//     }).catch(err => {
+//       console.log(err);
+//       // expect(0).toBe(1);
+//     })
+//   })
+
+//   expect(arrayResult).toEqual([10, 20, 30, 40, 50]);
+// });

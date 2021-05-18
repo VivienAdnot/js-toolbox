@@ -22,6 +22,4 @@
 //   });
 // };
 
-it("", () => {
-  expect(1).toBe(1);
-});
+test.todo('some test to be written in the future');

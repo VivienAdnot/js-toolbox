@@ -1,4 +1,4 @@
-const stampit = require("stampit");
+const stampit = require('@stamp/it');
 
 const Point = stampit({
   props: {

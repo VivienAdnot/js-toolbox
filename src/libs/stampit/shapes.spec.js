@@ -7,6 +7,7 @@ describe('stampit', () => {
     // Calling a method.
     const distance = point.distance({ x: 13, y: 42 });
     expect(distance).toEqual(1.0);
+    expect(point.foo).toEqual('bar');
   });
 
   it('distance Circle', () => {

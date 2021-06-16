@@ -1,6 +1,9 @@
 const stampit = require('@stamp/it');
 
 const Point = stampit({
+  configuration: {
+    foo: 'bar'
+  },
   props: {
     // default property values
     x: 0,

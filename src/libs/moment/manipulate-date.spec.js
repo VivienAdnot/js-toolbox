@@ -78,12 +78,31 @@ describe('set hour / minutes of day', () => {
   });
 });
 
-describe('in 3 days', () => {
-  it.only('from today', () => {
-    const now = '2021-04-02 15:20:29';
-    const momentDate = moment(now);
-    momentDate.add(3, 'days');
-    momentDate.startOf('day');
-    expect(momentDate.toISOString()).toMatchInlineSnapshot(`"2021-04-04T22:00:00.000Z"`);
-  });
+describe('in 3 days from today', () => {
+  const now = '2021-04-02 15:20:29';
+  const momentDate = moment(now);
+  momentDate.add(3, 'days');
+  momentDate.startOf('day');
+  expect(momentDate.toISOString()).toMatchInlineSnapshot(`"2021-04-04T22:00:00.000Z"`);
+});
+
+it('now + 30min', () => {
+  const now = '2021-06-28 10:20:29';
+  const momentDate = moment(now);
+  momentDate.add(30, 'minutes');
+  expect(momentDate.toISOString()).toMatchInlineSnapshot(`"2021-06-28T08:50:29.000Z"`);
+});
+
+it('now + 30min', () => {
+  // const momentDate = moment(Date.now()).add(30, 'minutes');
+  const momentDate = moment(Date.now());
+  // expect(momentDate.toISOString()).toMatchInlineSnapshot(`"2021-06-28T09:42:26.434Z"`);
+});
+
+it.only('now + end of 5 years', () => {
+  // const momentDate = moment(Date.now()).add(30, 'minutes');
+  const momentDate = moment(Date.now());
+  momentDate.add(15, 'years');
+  momentDate.endOf('year');
+  expect(momentDate.utc().format()).toMatchInlineSnapshot(`"2036-12-31T22:59:59Z"`);
 });

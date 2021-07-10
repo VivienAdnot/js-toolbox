@@ -6,6 +6,10 @@ describe('moment timestamp', () => {
   const utcDate = '2021-03-17T12:43:45.016Z';
   const frenchWinterDate = '2021-03-17T13:43:45+0100';
 
+  it('fomats now to isostring', () => {
+    expect(moment().toISOString()).toMatchInlineSnapshot(`"2021-07-05T17:25:18.264Z"`);
+  });
+
   it('formats utc to french winter date', () => {
     const m = moment(utcDate);
     expect(m.format(TIMESTAMPFORMAT)).toMatchInlineSnapshot(`"2021-03-17T13:43:45+0100"`);

@@ -1,5 +1,14 @@
 const moment = require('moment');
 const momentTz = require('moment-timezone');
+const MockDate = require('mockdate');
+
+beforeAll(() => {
+  MockDate.set('2021-07-05T17:25:18.264Z');
+})
+
+afterAll(() => {
+  MockDate.reset();
+})
 
 describe('moment timestamp', () => {
   const TIMESTAMPFORMAT = 'YYYY-MM-DDTHH:mm:ssZZ';

@@ -1,5 +1,14 @@
 const moment = require('moment');
 const momentTz = require('moment-timezone');
+const MockDate = require('mockdate');
+
+beforeAll(() => {
+  MockDate.set('2021-07-05T17:25:18.264Z');
+})
+
+afterAll(() => {
+  MockDate.reset();
+})
 
 // warning: i created these tests in winter, so GMT+1
 // in summer, they may fail because we will pass in GMT+2
@@ -99,7 +108,7 @@ it('now + 30min', () => {
   // expect(momentDate.toISOString()).toMatchInlineSnapshot(`"2021-06-28T09:42:26.434Z"`);
 });
 
-it.only('now + end of 5 years', () => {
+it('now + end of 5 years', () => {
   // const momentDate = moment(Date.now()).add(30, 'minutes');
   const momentDate = moment(Date.now());
   momentDate.add(15, 'years');

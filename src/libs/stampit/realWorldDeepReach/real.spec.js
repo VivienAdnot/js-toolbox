@@ -1,4 +1,4 @@
-const stampit = require('@stamp/it');;
+const stampit = require('@stamp/it');
 const { FacebookCampaignFactory, CommonStructure } = require('./real.stamp');
 
 it('foo: bar', async () => {

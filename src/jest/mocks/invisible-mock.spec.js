@@ -1,8 +1,7 @@
-jest.mock('../__stubs__/cache');
 const cache = require('../__stubs__/cache')
-cache.get.mockImplementation(() => {
+cache.get = () => {
   return 'baz'
-})
+}
 
 const useCache = require('../__stubs__/useCache')
 

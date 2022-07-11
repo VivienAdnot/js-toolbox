@@ -1,7 +1,8 @@
 const cache = require("./cache");
 
-const fn = () => {
+const useCache = () => {
+  cache.set({ foo: 'bar' });
   return cache.get("foo");
 };
 
-module.exports = fn;
+module.exports = useCache;
